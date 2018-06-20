@@ -2,3 +2,5 @@ This Tic Tac Toe game project is a means to practice the incorporation of severa
 This includes the use of enumerators, classes, methods, scope, and many more concepts. 
 
 At the same time, I will be using this project as a means to learn how to use Git and GitHub.
+
+- I have now tried adding a branch under branch1
