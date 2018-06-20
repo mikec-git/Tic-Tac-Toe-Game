@@ -1,0 +1,2 @@
+This Tic Tac Toe game project is a means to practice the incorporation of several programming techniques and features.
+This includes the use of enumerators, classes, methods, scope, and many more concepts. 
