@@ -5,3 +5,4 @@ At the same time, I will be using this project as a means to learn how to use Gi
 This text file will be a test file for practicing the different techniques of making a repo.
 
 - I have now tried adding a branch under branch1
+- I have now made edits to a branch AND the master and merged
