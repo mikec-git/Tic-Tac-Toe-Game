@@ -4,3 +4,4 @@ This includes the use of enumerators, classes, methods, scope, and many more con
 At the same time, I will be using this project as a means to learn how to use Git and GitHub.
 
 - I have now tried adding a branch under branch1
+- I have now made edits to a branch AND the master and merged
