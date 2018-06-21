@@ -10,7 +10,7 @@ namespace TicTacToe
     {
         static void Main(string[] args)
         {
-            private State[,] state = new State[3, 3];
+            State[,] state = new State[3, 3];
 
         }
     }
