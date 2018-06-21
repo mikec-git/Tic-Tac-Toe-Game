@@ -5,3 +5,10 @@ C:\Users\Mike\source\repos\Examples from The C# Player’s Guide\Tic-Tac-Toe\Tic
 C:\Users\Mike\source\repos\Examples from The C# Player’s Guide\Tic-Tac-Toe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
 C:\Users\Mike\source\repos\Examples from The C# Player’s Guide\Tic-Tac-Toe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
 C:\Users\Mike\source\repos\Examples from The C# Player’s Guide\Tic-Tac-Toe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb
+C:\Users\Mike\source\repos\Examples from The C# Player’s Guide\Tic-Tac-Toe-Game\TicTacToe\bin\Debug\TicTacToe.exe.config
+C:\Users\Mike\source\repos\Examples from The C# Player’s Guide\Tic-Tac-Toe-Game\TicTacToe\bin\Debug\TicTacToe.exe
+C:\Users\Mike\source\repos\Examples from The C# Player’s Guide\Tic-Tac-Toe-Game\TicTacToe\bin\Debug\TicTacToe.pdb
+C:\Users\Mike\source\repos\Examples from The C# Player’s Guide\Tic-Tac-Toe-Game\TicTacToe\obj\Debug\TicTacToe.csprojAssemblyReference.cache
+C:\Users\Mike\source\repos\Examples from The C# Player’s Guide\Tic-Tac-Toe-Game\TicTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
+C:\Users\Mike\source\repos\Examples from The C# Player’s Guide\Tic-Tac-Toe-Game\TicTacToe\obj\Debug\TicTacToe.exe
+C:\Users\Mike\source\repos\Examples from The C# Player’s Guide\Tic-Tac-Toe-Game\TicTacToe\obj\Debug\TicTacToe.pdb
