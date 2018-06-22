@@ -8,5 +8,12 @@ namespace TicTacToe
 {
     class Board
     {
+        State[,] state;
+
+        public Board()
+        {
+            state = new State[3, 3];
+        }
+
     }
 }

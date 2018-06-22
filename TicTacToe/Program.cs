@@ -27,8 +27,9 @@ namespace TicTacToe
             Player player2 = new Player(p2Name);
             StartDecider decider = new StartDecider();
 
-            bool firstMove = decider.StartPlayer(player1.startNum, player2.startNum);
-            Console.WriteLine((firstMove == true) ? $"{player1.Name} Starts!" : $"{player2.Name} Starts!");
+            bool startOrder = decider.StartPlayer(player1.startNum, player2.startNum);
+            Console.WriteLine("\nIt was randomly decided that: ");
+            Console.WriteLine((startOrder == true) ? $"{player1.Name} Starts!" : $"{player2.Name} Starts!");
 
 
 
