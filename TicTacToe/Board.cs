@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace TicTacToe
 {
-    class Position
+    class Board
     {
-
-
     }
 }
