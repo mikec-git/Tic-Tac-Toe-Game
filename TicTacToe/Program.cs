@@ -23,17 +23,21 @@ namespace TicTacToe
             Console.Write("Type the name of Player 2: ");
             string p2Name = Console.ReadLine();
 
+            Board board = new Board();
             Player player1 = new Player(p1Name);
             Player player2 = new Player(p2Name);
-            StartDecider decider = new StartDecider();
+            StartPlayer start = new StartPlayer();
 
-            bool startOrder = decider.StartPlayer(player1.startNum, player2.startNum);
-            Console.WriteLine("\nIt was randomly decided that: ");
-            Console.WriteLine((startOrder == true) ? $"{player1.Name} Starts!" : $"{player2.Name} Starts!");
+            bool startOrder = start.Order(player1.name, player2.name);
 
+            
+            while (winCheck != true)
+            {
 
-
+            }
+            
             Console.ReadKey();
+
         }
     }
 }
