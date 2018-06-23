@@ -8,19 +8,22 @@ namespace TicTacToe
 {
     class Board
     {
-        State[,] state;
+        private State[,] state;
+        public static State CurrentMove { get; private set; }
 
         public Board()
         {
             state = new State[3, 3];
+            CurrentMove = State.X;
         }
-        
-        public Tuple<int,int> BoardPosition(int squareNum)
+
+        /* Correlates user input for board number (1 to 9) with rows and columns
+         Will follow keyboard numpad format */
+        public Tuple<int, int> BoardPosition(int squareNum)
         {
-            // Will follow keyboard numpad format
             switch (squareNum)
             {
-                case 1: return Tuple.Create(2, 0); 
+                case 1: return Tuple.Create(2, 0);
                 case 2: return Tuple.Create(2, 1);
                 case 3: return Tuple.Create(2, 2);
                 case 4: return Tuple.Create(1, 0);
@@ -31,8 +34,31 @@ namespace TicTacToe
                 case 9: return Tuple.Create(0, 2);
                 default: return null;
             }
-            
         }
 
+        public void InputMoveToBoard(Player currentPlayer, Board board)
+        {
+            var position = currentPlayer.PlayerMove(board);
+            while (!CheckIfUndecided(position))
+            {
+                Console.WriteLine("The chosen location is already taken. Try again: ");
+                position = currentPlayer.PlayerMove(board);
+            }
+
+            state[position.Item1, position.Item2] = CurrentMove;
+            CurrentMove = ((CurrentMove == State.X) ? State.O : State.X);
+        }
+
+        private bool CheckIfUndecided(Tuple<int,int> position)
+        {
+            if (state[position.Item1,position.Item2] == State.Undecided)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
