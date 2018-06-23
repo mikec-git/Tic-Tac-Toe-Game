@@ -20,6 +20,7 @@ namespace TicTacToe
             // Will follow keyboard numpad format
             switch (squareNum)
             {
+                case 1: return Tuple.Create(2, 0); 
                 case 2: return Tuple.Create(2, 1);
                 case 3: return Tuple.Create(2, 2);
                 case 4: return Tuple.Create(1, 0);

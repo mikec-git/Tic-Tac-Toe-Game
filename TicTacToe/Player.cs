@@ -8,15 +8,12 @@ namespace TicTacToe
 {
     class Player
     {
-        public static Random rnd = new Random();
         public string name { get; }
-        public int startNum { get; }
         private int squareNum;
 
         public Player(string name)
         {
             this.name = name;
-            startNum = rnd.Next(0, 101);
         }
         
         public Tuple<int,int> PlayerMove (Board board)
@@ -33,7 +30,7 @@ namespace TicTacToe
             } while (squareNum < 1 || squareNum < 9);
 
             var position = board.BoardPosition(squareNum);
-            return position;
+            return position;    // item 1 = rows, item 2 = columns
         }
     }
 }
