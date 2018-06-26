@@ -44,9 +44,11 @@ namespace TicTacToe
 
         public static bool DrawCheck(Board board)
         {
-
+            foreach (States state in board.State)
+            {
+                if (state == States.Undecided) return false;
+            }
             return true;
-            return false;
         }
     }
 }
