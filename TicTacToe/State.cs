@@ -1,4 +1,4 @@
 ﻿namespace TicTacToe
 {
-    public enum State { Undecided, X, O };
+    public enum States { Undecided, X, O };
 }
