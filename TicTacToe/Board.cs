@@ -17,6 +17,20 @@ namespace TicTacToe
             CurrentMove = States.X;
         }
 
+        public void InputMoveToBoard(Player currentPlayer, Board board)
+        {
+            Console.WriteLine($"\n{currentPlayer.Name}'s Turn...");
+            var position = currentPlayer.PlayerMove(board);
+            while (CheckIfUndecided(position, board) == false)
+            {
+                Console.WriteLine("That selection is already taken. Try again: ");
+                position = currentPlayer.PlayerMove(board);
+            }
+
+            board.State[position.Item1, position.Item2] = board.CurrentMove;
+            board.CurrentMove = ((board.CurrentMove == States.X) ? States.O : States.X);
+        }
+
         // Correlates user input for board number (1 to 9) with rows and columns
         // Will follow keyboard numpad format
         public Tuple<int, int> BoardPosition(int squareNum)
@@ -34,20 +48,6 @@ namespace TicTacToe
                 case 9: return Tuple.Create(0, 2);
                 default: return null;
             }
-        }
-
-        public void InputMoveToBoard(Player currentPlayer, Board board)
-        {
-            Console.WriteLine($"\n{currentPlayer.Name}'s Turn...");
-            var position = currentPlayer.PlayerMove(board);
-            while (CheckIfUndecided(position, board) == false)
-            {
-                Console.WriteLine("That selection is already taken. Try again: ");
-                position = currentPlayer.PlayerMove(board);
-            }
-
-            board.State[position.Item1, position.Item2] = board.CurrentMove;
-            board.CurrentMove = ((board.CurrentMove == States.X) ? States.O : States.X);
         }
 
         private bool CheckIfUndecided(Tuple<int,int> position, Board board)
