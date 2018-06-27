@@ -48,6 +48,8 @@ namespace TicTacToe
             {
                 if (state == States.Undecided) return false;
             }
+
+            Console.WriteLine("\nDraw game! Neither player wins this round!");
             return true;
         }
     }

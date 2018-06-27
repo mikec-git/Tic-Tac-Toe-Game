@@ -8,12 +8,12 @@ namespace TicTacToe
 {
     class Player
     {
-        public string name { get; }
+        public string Name { get; }
         private int squareNum;
 
         public Player(string name)
         {
-            this.name = name;
+            Name = name;
         }
         
         public Tuple<int,int> PlayerMove (Board board)
@@ -27,7 +27,7 @@ namespace TicTacToe
                 {
                     Console.WriteLine("That is an incorrect input, try again.");
                 }
-            } while (squareNum < 1 || squareNum < 9);
+            } while (squareNum < 1 || squareNum > 9);
 
             var position = board.BoardPosition(squareNum);
             return position;    // item 1 = rows, item 2 = columns

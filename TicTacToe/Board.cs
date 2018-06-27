@@ -8,17 +8,17 @@ namespace TicTacToe
 {
     class Board
     {
-        private State[,] state;
-        public static State CurrentMove { get; private set; }
+        public States[,] State { get; private set; }
+        public States CurrentMove { get; private set; }
 
         public Board()
         {
-            state = new State[3, 3];
-            CurrentMove = State.X;
+            State = new States[3, 3];
+            CurrentMove = States.X;
         }
 
-        /* Correlates user input for board number (1 to 9) with rows and columns
-         Will follow keyboard numpad format */
+        // Correlates user input for board number (1 to 9) with rows and columns
+        // Will follow keyboard numpad format
         public Tuple<int, int> BoardPosition(int squareNum)
         {
             switch (squareNum)
@@ -38,27 +38,23 @@ namespace TicTacToe
 
         public void InputMoveToBoard(Player currentPlayer, Board board)
         {
+            Console.WriteLine($"\n{currentPlayer.Name}'s Turn...");
             var position = currentPlayer.PlayerMove(board);
-            while (!CheckIfUndecided(position))
+            while (CheckIfUndecided(position, board) == false)
             {
-                Console.WriteLine("The chosen location is already taken. Try again: ");
+                Console.WriteLine("That selection is already taken. Try again: ");
                 position = currentPlayer.PlayerMove(board);
             }
 
-            state[position.Item1, position.Item2] = CurrentMove;
-            CurrentMove = ((CurrentMove == State.X) ? State.O : State.X);
+            board.State[position.Item1, position.Item2] = board.CurrentMove;
+            board.CurrentMove = ((board.CurrentMove == States.X) ? States.O : States.X);
         }
 
-        private bool CheckIfUndecided(Tuple<int,int> position)
+        private bool CheckIfUndecided(Tuple<int,int> position, Board board)
         {
-            if (state[position.Item1,position.Item2] == State.Undecided)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            if (board.State[position.Item1,position.Item2] == States.Undecided) return true;
+
+            return false;
         }
     }
 }

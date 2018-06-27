@@ -33,7 +33,6 @@ namespace TicTacToe
                     else if (vRow == 4 && num == '7') num = '1';
                     instructionBoard[vRow, iCol] = (Char)num;
                 }
-                    
             }
 
             for(int hRow = 1; hRow < 4; hRow += 2)
