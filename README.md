@@ -6,7 +6,7 @@ This is a repo for my tic-tac-toe game. This is a project assigned from "The C# 
 * Scope of classes, methods, and variables
 * Splitting up of different tasks into smaller and more manageable components
 * Implementation of enums, foreach loops, 'out' parameters, multidimensional arrays
-* The importance of readability and consise code
+* The importance of readability and concise code
 
 ## Final Comments
 This project really gave me insight on the importance of splitting up tasks into smaller, more manageable components (Divide and Conquer). This reduced the clutter of the overall project and allowed editing specific parts much easier. 
