@@ -9,9 +9,9 @@ This is a repo for my tic-tac-toe game. This is a project assigned from "The C# 
 * The importance of readability and concise code
 
 ## Final Comments
-This project really gave me insight on the importance of splitting up tasks into smaller, more manageable components (Divide and Conquer). This reduced the clutter of the overall project and allowed editing specific parts much easier. 
+This project really gave me insight on the importance of splitting up tasks into smaller, more manageable components (Divide and Conquer). This reduced the clutter of the overall project and allowed for easier editing of specific parts of the game.
 
-Some things I can definitely improve upon is deciding which components to split up for certain tasks, and organizing methods so that they are related to their class name. 
+Some things I can definitely improve upon is deciding how to efficiently split up tasks into classes and methods, and organizing methods so that they are directly related to their class name. Additionally, I should keep in mind not to split up tasks too much as this could lead to an excessive amount of methods.
 
 ## Project Description
 #### Board Class
