@@ -34,7 +34,7 @@ namespace TicTacToe
             }
             render.DrawBoard(board);
 
-            Initializer.Ending(GameStatus.Winner(board), xPlayer.Name, oPlayer.Name);
+            Initializer.Ending(GameStatus.Winner(board), GameStatus.DrawCheck(board), xPlayer.Name, oPlayer.Name);
 
             Console.WriteLine("\nPress any key to exit: ");
             Console.ReadKey();

@@ -22,7 +22,7 @@ namespace TicTacToe
             p2Name = Console.ReadLine();
         }
 
-        static public void Ending(States winner, string xName, string oName)
+        static public void Ending(States winner, bool draw, string xName, string oName)
         {
             if (winner == States.X)
             {
@@ -33,6 +33,9 @@ namespace TicTacToe
             {
                 Console.Write("\nThe winner of this round is: ");
                 Console.WriteLine($"{oName}");
+            } else if (winner == States.Undecided && draw)
+            {
+                Console.WriteLine("\nDraw game! Neither player wins this round!");
             }
         }
     }
