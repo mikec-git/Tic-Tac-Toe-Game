@@ -8,36 +8,36 @@ namespace TicTacToe
 {
     class Program
     {
-        
-
         static void Main(string[] args)
         {
-            Console.Title = "Mike's Tic Tac Toe Game";
-            Console.WriteLine("Mike's Tic Tac Toe Game!");
-            Console.WriteLine("Press any key to continue: ");
-            Console.ReadKey();
-            Console.Clear();
-
-            Console.Write("Type the name of Player 1: ");
-            string p1Name = Console.ReadLine();
-            Console.Write("Type the name of Player 2: ");
-            string p2Name = Console.ReadLine();
+            Initializer.Intro(out string p1Name, out string p2Name);
 
             Board board = new Board();
             Player player1 = new Player(p1Name);
             Player player2 = new Player(p2Name);
-            StartPlayer start = new StartPlayer();
+            Player xPlayer, oPlayer;
+            StartPlayer starter = new StartPlayer();
+            Renderer render = new Renderer();
 
-            bool startOrder = start.Order(player1.name, player2.name);
+            // Prints out keypad instructions for players
+            render.Instructions();
 
-            
-            while (winCheck != true)
+            // I thought it would be fair to randomly determine who starts first
+            starter.GameStarter(player1, player2, out xPlayer, out oPlayer);
+
+            // Game runs while no states are three-in-a-row, and while the board is not yet completely filled
+            while (GameStatus.Winner(board) == States.Undecided && !GameStatus.DrawCheck(board))
             {
-
+                render.DrawBoard(board);
+                if (board.CurrentMove == States.X)  board.InputMoveToBoard(xPlayer, board);
+                else                                board.InputMoveToBoard(oPlayer, board);
             }
-            
-            Console.ReadKey();
+            render.DrawBoard(board);
 
+            Initializer.Ending(GameStatus.Winner(board), xPlayer.Name, oPlayer.Name);
+
+            Console.WriteLine("\nPress any key to exit: ");
+            Console.ReadKey();
         }
     }
 }
